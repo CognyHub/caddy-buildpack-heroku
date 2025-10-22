@@ -18,9 +18,9 @@ echo "-----> Installing latest caddy bin"
 cd $DIR; cp ../caddy $1/caddy
 cd $CURDIR
 
-echo "-----> Setting up Procfile"
-cd $DIR; cp ../Procfile $1/Procfile
-cd $CURDIR
+# echo "-----> Setting up Procfile"
+# cd $DIR; cp ../Procfile $1/Procfile
+# cd $CURDIR
 
 echo "-----> Setting up Caddyfile"
 cd $DIR; cp ../Caddyfile $1/Caddyfile
@@ -31,6 +31,6 @@ cd $DIR; cp ../Caddyfile.heroku $1/Caddyfile.heroku
 cd $CURDIR
 
 echo "-----> Deploy Caddy Runner"
-cd $DIR; cp ../setup_caddy.sh $1/setup_caddy.sh
-chmod 755 $1/setup_caddy.sh
+cd $DIR; cp ../start.sh $1/start.sh
+chmod 755 $1/start.sh
 cd $CURDIR 
