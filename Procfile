@@ -1,1 +1,1 @@
-web: ./setup_caddy.sh && ./caddy -conf="Caddyfile"
+web: ./setup_caddy.sh && ./caddy start --config "Caddyfile" --watch
