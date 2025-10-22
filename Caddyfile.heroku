@@ -1,7 +1,4 @@
-reverse_proxy /api/* localhost:3000 # api -> postgrest
-
 map {path} {redirect-uri} {
-	/bla https://www.cruzeiro.com.br/
 	default not_found
 }
 
