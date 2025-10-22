@@ -31,6 +31,6 @@ cd $DIR; cp ../Caddyfile.heroku $1/Caddyfile.heroku
 cd $CURDIR
 
 echo "-----> Deploy Caddy Runner"
-cd $DIR; cp ../start.sh $1/start.sh
-chmod 755 $1/start.sh
+cd $DIR; cp ../start_caddy.sh $1/start_caddy.sh
+chmod 755 $1/start_caddy.sh
 cd $CURDIR 
