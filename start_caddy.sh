@@ -1,4 +1,4 @@
 #!/bin/sh
 
-# start process background
-./caddy_darwin_arm64 start --config Caddyfile --watch
+# start process foreground
+./caddy_darwin_arm64 run --config Caddyfile --watch
