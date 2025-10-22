@@ -20,6 +20,7 @@ cd $CURDIR
 
 echo "-----> Setting up Procfile"
 cd $DIR; cp ../Procfile $1/Procfile
+cd $DIR; cp ../Caddyfile $1/Caddyfile
 cd $CURDIR
 
 echo "-----> Deploy Caddy Runner"
