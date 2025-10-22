@@ -1,9 +1,0 @@
-map {path} {redirect-uri} {
-	default not_found
-}
-
-@hasRedir expression `{redirect-uri} != "not_found"`
-redir @hasRedir {redirect-uri}
-
-respond "That's an unknown short URL ... :(" 404
-

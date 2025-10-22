@@ -22,13 +22,10 @@ cd $CURDIR
 # cd $DIR; cp ../Procfile $1/Procfile
 # cd $CURDIR
 
-echo "-----> Setting up Caddyfile"
-cd $DIR; cp ../Caddyfile $1/Caddyfile
-cd $CURDIR
+# echo "-----> Setting up Caddyfile"
+# cd $DIR; cp ../Caddyfile $1/Caddyfile
+# cd $CURDIR
 
-echo "-----> Setting up Caddyfile.heroku"
-cd $DIR; cp ../Caddyfile.heroku $1/Caddyfile.heroku
-cd $CURDIR
 
 echo "-----> Deploy Caddy Runner"
 cd $DIR; cp ../start_caddy.sh $1/start_caddy.sh
