@@ -1,0 +1,12 @@
+reverse_proxy /api/* localhost:3000 # api -> postgrest
+
+map {path} {redirect-uri} {
+	/bla https://www.cruzeiro.com.br/
+	default not_found
+}
+
+@hasRedir expression `{redirect-uri} != "not_found"`
+redir @hasRedir {redirect-uri}
+
+respond "That's an unknown short URL ... :(" 404
+
