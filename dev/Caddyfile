@@ -1,0 +1,22 @@
+# TLS Options
+{
+	auto_https off
+}
+
+api.localhost {
+	reverse_proxy localhost:3000
+}
+
+redir.localhost {
+	map {path} {redirect-uri} {
+		/abc https://github.com/wblondel
+		/kA24GWf http://uol.com.br
+		/xxxd http://uol.com.br
+		default not_found
+	}
+
+	@hasRedir expression `{redirect-uri} != "not_found"`
+	redir @hasRedir {redirect-uri}
+
+	respond "That's an unknown short URL ... :(" 404
+}
