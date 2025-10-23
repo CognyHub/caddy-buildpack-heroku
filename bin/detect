@@ -2,7 +2,5 @@
 # bin/detect <build-dir>
 set -e
 
-if test -n "$(find "$1" -type f -name 'Caddyfile' | sed 1q)"
-then echo Caddy
-else echo no; exit 1
-fi
+echo 'Caddy'
+exit 0
