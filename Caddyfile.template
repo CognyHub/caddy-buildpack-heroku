@@ -1,6 +1,12 @@
 :{$PORT} {
-	reverse_proxy /api/* localhost:3000 # api -> postgrest
-
+    # API Service
+    handle /api/* {
+        reverse_proxy 0.0.0.0:3000 {
+            header_up Host {upstream_hostport}
+            header_up X-Real-IP {remote_host}
+        }
+    }
+	
 	map {path} {redirect-uri} {
 		default not_found
 	}
