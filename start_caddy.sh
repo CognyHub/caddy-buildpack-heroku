@@ -1,11 +1,11 @@
 #!/bin/sh
 
 # format config
-./caddy fmt --config Caddyfile --overwrite 
-cp Caddyfile /tmp
+./caddy fmt --config Caddyfile.template --overwrite 
+cp Caddyfile.template /tmp/Caddyfile
 
 # export config to json file
-./caddy adapt --config Caddyfile --adapter caddyfile --pretty > /tmp/config.json
+./caddy adapt --config /tmp/Caddyfile --adapter caddyfile --pretty > /tmp/config.json
 
 # start process foreground
-./caddy run --config "Caddyfile" --watch
+./caddy run --config /tmp/Caddyfile --watch
