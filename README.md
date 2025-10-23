@@ -10,7 +10,7 @@ Include static files in your repo.
 
 Set your buildpack to
 
-`heroku config:add BUILDPACK_URL=https://github.com/nlozovan/caddy-buildpack-heroku.git`
+`heroku config:add BUILDPACK_URL=https://github.com/CognyHub/caddy-buildpack-herokuu.git`
 
 Profit.
 
