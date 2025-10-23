@@ -22,10 +22,9 @@ cd $CURDIR
 # cd $DIR; cp ../Procfile $1/Procfile
 # cd $CURDIR
 
-# echo "-----> Setting up Caddyfile"
-# cd $DIR; cp ../Caddyfile $1/Caddyfile
-# cd $CURDIR
-
+echo "-----> Setting up Caddyfile.template"
+cd $DIR; cp ../Caddyfile.template $1/Caddyfile.template
+cd $CURDIR
 
 echo "-----> Deploy Caddy Runner"
 cd $DIR; cp ../start_caddy.sh $1/start_caddy.sh
