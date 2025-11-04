@@ -2,10 +2,10 @@
 
 # format config
 ./caddy fmt --config "Caddyfile.template" --overwrite 
-cp "Caddyfile.template" /tmp/Caddyfile
+cp "Caddyfile.template" Caddyfile
 
 # export config to json file
-./caddy adapt --config "/tmp/Caddyfile" --adapter caddyfile --pretty > /tmp/config.json
+#./caddy adapt --config "Caddyfile" --adapter caddyfile --pretty > /tmp/config.json
 
 # start process foreground
-./caddy run --config "/tmp/Caddyfile" --watch
+./caddy run --config "Caddyfile" --watch
